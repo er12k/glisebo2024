@@ -1,0 +1,75 @@
+/* Reset de estilos para garantir uma base consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #333;
+    color: #c21d1d;
+    padding: 20px;
+}
+
+header {
+    background-color: #a32525;
+    color: #f32e2e;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #d11717;
+    text-decoration: none;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #c52525;
+    color: #d80606;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos específicos para as seções */
+#destaques {
+    background-color: #ca3939;
+    padding: 20px;
+}
+
+#destaques h2 {
+    color: #333;
+}
+
+#livros-venda,
+#livros-troca {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
