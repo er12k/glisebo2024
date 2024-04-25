@@ -9,14 +9,14 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #333;
-    color: #c21d1d;
+    background-color: #f8f8f8;
+    color: #333;
     padding: 20px;
 }
 
 header {
-    background-color: #a32525;
-    color: #f32e2e;
+    background-color: #333;
+    color: #fff;
     padding: 10px 20px;
 }
 
@@ -34,7 +34,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #d11717;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -47,8 +47,8 @@ section h2 {
 }
 
 footer {
-    background-color: #c52525;
-    color: #d80606;
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 10px 0;
     position: fixed;
@@ -58,7 +58,7 @@ footer {
 
 /* Estilos específicos para as seções */
 #destaques {
-    background-color: #ca3939;
+    background-color: #f5f5f5;
     padding: 20px;
 }
 
