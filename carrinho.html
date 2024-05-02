@@ -19,11 +19,11 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            text-align: center; /* Centraliza os elementos dentro do container */
         }
 
         .nav {
             margin-bottom: 20px;
-            text-align: center; /* Centraliza a navegação */
         }
 
         .nav-item {
@@ -39,29 +39,34 @@
 
         .cart {
             margin-top: 20px;
-            text-align: center; /* Centraliza Carrinho de Compras e Carrinho Vazio */
         }
 
+        /* Cor personalizada para "Carrinho de compras" */
+        .cart h2 {
+            color: #4b0082; /* Cor para "Carrinho de compras" */
+        }
+
+        /* Cor personalizada para "Carrinho vazio" */
         .empty-cart {
             font-size: 24px;
             font-weight: bold;
+            color: #0f010b; /* Cor para "Carrinho vazio" */
         }
 
-        .recommendations {
-            margin-top: 30px;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center; /* Centraliza Veja Recomendações para Você */
+        /* Cor personalizada para "Veja recomendações para você" */
+        .recommendations p {
+            color: #001200; /* Cor para "Veja recomendações para você" */
         }
 
         .book-list {
             display: flex;
-            flex-wrap: wrap;
+            justify-content: center; /* Centraliza os livros na mesma fileira */
             margin-top: 10px;
+            flex-wrap: nowrap; /* Evita a quebra de linha */
         }
 
         .book {
-            width: calc(25% - 20px);
+            width: 20%; /* Define a largura de cada livro para ficarem na mesma fileira */
             margin: 10px;
             padding: 10px;
             background-color: #fff;
@@ -87,24 +92,24 @@
 <body>
 
     <div class="container">
-        <h1>GLISEBO</h1>
+        <h1 style="color: #f808b8;">GLISEBO</h1> <!-- Cor personalizada para GLISEBO -->
 
         <div class="nav">
             <span class="nav-item">Categorias</span>
-            <span class="nav-item">Livros mais vendidos</span>
-            <span class="nav-item">Principais autores</span>
-            <span class="nav-item">Dicas de livros</span>
+            <span class="nav-item">Livros Mais Vendidos</span>
+            <span class="nav-item">Principais Autores</span>
+            <span class="nav-item">Dicas de Livros</span>
         </div>
 
         <div class="cart">
-            <h2>Carrinho de Compras</h2>
-            <p class="empty-cart">Carrinho Vazio</p>
+        
+            <h2><p class="empty-cart">Carrinho vazio</p></h2>
             <!-- Frase clicável em vez do botão -->
             <a href="#" class="ver-ofertas">Ver ofertas na sua região</a>
         </div>
 
         <div class="recommendations">
-            <p>Veja recomendações para você</p>
+            <h2>Veja recomendações para você</h2>
             <div class="book-list">
                 <!-- Livros do site à venda -->
                 <div class="book">

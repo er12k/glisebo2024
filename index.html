@@ -1,22 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLISEBO - Página Inicial</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #fddde6; /* Rosa pastel */
+            color: #db05a9; /* Rosa escuro */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center; /* Centraliza os elementos dentro do container */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #db05a9;
+            color: white;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .categorias ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .categorias ul li {
+            display: inline-block;
+        }
+
+        .categorias ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+
+        .search-bar button {
+            background-color: white;
+            color: #db05a9;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .livros-disponiveis, .autores-principais, .livros-favoritados {
+            padding: 20px;
+        }
+
+        .livro, .autor, .favorito {
+            border: 1px solid #db05a9;
+            border-radius: 5px;
+            padding: 10px;
+            margin-right: 10px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .add-to-cart {
+            background-color: #ff69b4; /* Cor do botão */
+            color: #fff;
+            padding: 8px 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            text-decoration: none;
+        }
+
+        .add-to-cart:hover {
+            background-color: #ff1493; /* Cor do botão ao passar o mouse */
+        }
+
+        .cart {
+            margin-top: 20px;
+        }
+
+        .empty-cart {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+        }
+
+        .recommendations {
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: green;
+        }
+
+    </style>
 </head>
+
 <body>
+
     <header>
         <div class="logo">GLISEBO</div>
         <nav class="categorias">
             <ul>
-                <li><a href="favoritos.html">Favoritos</a></li>
+                <li><a href="#">Favoritos</a></li>
                 <li><a href="#">Troca</a></li>
-                <li><a href="#">Usados a Venda</a></li>
-                <li><a href="cadastrar_usuario.html">Login/Cadastro</a></li>
+                <li><a href="#">Usados</a></li>
+                <li><a href="#">Login/Cadastro</a></li>
                 <li><a href="#">Suporte</a></li>
-                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="#">Carrinho</a></li>
             </ul>
         </nav>
         <div class="search-bar">
@@ -24,95 +146,125 @@
             <button>Pesquisar</button>
         </div>
     </header>
-    
 
-    <section class="livros-disponiveis">
-        <h2>Livros Usados Disponíveis</h2>
-        <div class="livros-carousel">
-            <div class="livro">
-                <img class="img_livro" src="img/livro1.jpg" alt="Capa do Livro">
-                <h3>Os Sete Maridos de Evelyn Hugo</h3>
-                <p>Autor: Taylor Jenkins Reid</p>
-                <p>Preço: R$15,00</p>
-                <button>Adicionar ao Carrinho</button>
-                <button>Visualizar Melhor</button>
-            </div>
-            
-            <div class="livro">
-                <img class="img_livro" src="img/livro2.jpg" alt="Capa do Livro">
-                <h3>Cem anos de solidão</h3>
-                <p>Autor: Gabriel Garcia Marquez</p>
-                <p>Preço: R$15,00</p>
-                <button>Adicionar ao Carrinho</button>
-                <button>Visualizar Melhor</button>
-            </div>
-            <div class="livro">
-                <img class="img_livro" src="img/livro3.jpg" alt="Capa do Livro">
-                <h3>Amor & Gelato</h3>
-                <p>Autor: Nome do Autor</p>
-                <p>Preço: R$20,00</p>
-                <button>Adicionar ao Carrinho</button>
-                <button>Visualizar Melhor</button>
-            </div>
-        </div>
-    </section>
-    <section class="autores-principais">
-        <h2>Principais Autores</h2>
-        <div class="autores-carousel">
-            <div class="autor">
-                <img class="img_autor"src="img/autor1.jpg" alt="Foto do Autor">
-                <h3>Collen Hoover</h3>
-                <p>Número de Livros: 10</p>
-                <button>Ver Livros</button>
+    <div class="container">
+        <section class="livros-disponiveis">
+            <h2>Livros Usados Disponíveis</h2>
+            <div class="livros-carousel">
+                <div class="livro">
+                    <img class="img_livro" src="img/livro1.jpg" alt="Capa do Livro">
+                    <h3>Os Sete Maridos de Evelyn Hugo</h3>
+                    <p>Autor: Taylor Jenkins Reid</p>
+                    <p>Preço: R$15,00</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
                 
-            </div>
-            
-            <div class="autor">
-                <img class="img_autor"src="img/autor2.jpg" alt="Foto do Autor">
-                <h3>Virginia Woolf</h3>
-                <p>Número de Livros: 10</p>
-                <button>Ver Livros</button>
-            </div>
-            <div class="autor">
-                <img class="img_autor"src="img/autor3.webp" alt="Foto do Autor">
-                <h3>Clarice Lispector</h3>
-                <p>Número de Livros: 10</p>
-                <button>Ver Livros</button>
-            </div>
-            <!-- Adicione mais divs .autor conforme necessário -->
-        </div>
-    </section>
-    <section class="livros-favoritados">
-        <h2>Livros Mais Favoritados</h2>
-        <div class="favoritos-carousel">
-            <div class="favorito">
-                <img class="img_favorito"src="img/favorito1.jpg" alt="Capa do Livro Favorito">
-                <h3>O Morro dos Ventos Uivantes</h3>
-                <p>Autor: Emily Bronte</p>
-                <p>Preço: R$15,00</p>
-                <button>Adicionar ao Carrinho</button>
-                <button>Visualizar Melhor</button>
-            </div>
-            
-            <div class="favorito">
-                <img class="img_favorito"src="img/favorito2.jpg" alt="Capa do Livro Favorito">
-                <h3>A Canção de Aquiles</h3>
-                <p>Autor: Madeline Miller</p>
-                <p>Preço: R$10,00</p>
-                <button>Adicionar ao Carrinho</button>
-                <button>Visualizar Melhor</button>          
-            </div>
+                <div class="livro">
+                    <img class="img_livro" src="img/livro2.jpg" alt="Capa do Livro">
+                    <h3>Cem Anos de Solidão</h3>
+                    <p>Autor: Gabriel Garcia Marquez</p>
+                    <p>Preço: R$15,00</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
                 
-            <div class="favorito">
-                <img class="img_favorito"src="img/favorito3.jpg" alt="Capa do Livro Favorito">
-                <h3>Vermelho, Branco e Sangue Azul</h3>
-                <p>Autor: Casey McQuiston</p>
-                <p>Preço: R$15,00</p>
-                <button>Adicionar ao Carrinho</button> 
-                <button>Visualizar Melhor</button>         
+                <div class="livro">
+                    <img class="img_livro" src="img/livro3.jpg" alt="Capa do Livro">
+                    <h3>Amor & Gelato</h3>
+                    <p>Autor: Jenna Evans Welch</p>
+                    <p>Preço: R$20,00</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
             </div>
+        </section>
+
+        <section class="autores-principais">
+            <h2>Principais Autores</h2>
+            <div class="autores-carousel">
+                <div class="autor">
+                    <img class="img_autor" src="img/autor1.jpg" alt="Foto do Autor">
+                    <h3>Colleen Hoover</h3>
+                    <p>Número de Livros: 10</p>
+                    <button>Ver Livros</button>
+                </div>
+                
+                <div class="autor">
+                    <img class="img_autor" src="img/autor2.jpg" alt="Foto do Autor">
+                    <h3>Virginia Woolf</h3>
+                    <p>Número de Livros: 10</p>
+                    <button>Ver Livros</button>
+                </div>
+                
+                <div class="autor">
+                    <img class="img_autor" src="img/autor3.webp" alt="Foto do Autor">
+                    <h3>Clarice Lispector</h3>
+                    <p>Número de Livros: 10</p>
+                    <button>Ver Livros</button>
+                </div>
+                <!-- Adicione mais divs .autor conforme necessário -->
+            </div>
+        </section>
+
+        <section class="livros-favoritados">
+            <h2>Livros Mais Favoritados</h2>
+            <div class="favoritos-carousel">
+                <div class="favorito">
+                    <img class="img_favorito" src="img/favorito1.jpg" alt="Capa do Livro Favorito">
+                    <h3>O Morro dos Ventos Uivantes</h3>
+                    <p>Autor: Emily Brontë</p>
+                    <p>Preço: R$15,00</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="favorito">
+                    <img class="img_favorito" src="img/favorito2.jpg" alt="Capa do Livro Favorito">
+                    <h3>A Canção de Aquiles</h3>
+                    <p>Autor: Madeline Miller</p>
+                    <p>Preço: R$10,00</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+                
+                <div class="favorito">
+                    <img class="img_favorito" src="img/favorito3.jpg" alt="Capa do Livro Favorito">
+                    <h3>Vermelho, Branco e Sangue Azul</h3>
+                    <p>Autor: Casey McQuiston</p>
+                    <p>Preço: R$15,00</p>
+                    <button class="add-to-cart">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção do Carrinho -->
+        <div id="carrinho" class="cart">
+            <h2>Carrinho de Compras</h2>
+            <p id="carrinho-vazio">Carrinho Vazio</p>
+            <ul id="lista-carrinho"></ul>
         </div>
-    </section>
-    
+    </div>
+
+    <script>
+        // JavaScript para adicionar livros ao carrinho
+        const carrinhoVazio = document.getElementById('carrinho-vazio');
+        const listaCarrinho = document.getElementById('lista-carrinho');
+        const botoesAdicionar = document.querySelectorAll('.add-to-cart');
+
+        botoesAdicionar.forEach(botao => {
+            botao.addEventListener('click', function () {
+                const livro = botao.parentElement;
+                const nomeLivro = livro.querySelector('h3').textContent;
+                const autor = livro.querySelector('p').textContent;
+                const preco = livro.querySelector('p:nth-of-type(2)').textContent;
+
+                // Remover a mensagem "Carrinho Vazio"
+                carrinhoVazio.style.display = 'none';
+
+                // Adicionar o livro ao carrinho
+                const itemCarrinho = document.createElement('li');
+                itemCarrinho.textContent = `${nomeLivro} - ${autor} (${preco})`;
+                listaCarrinho.appendChild(itemCarrinho);
+            });
+        });
+    </script>
+
 </body>
+
 </html>
