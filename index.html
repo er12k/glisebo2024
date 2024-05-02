@@ -1,43 +1,92 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livros à Venda e Troca</title>
-    <link rel="stylesheet" href="style.css"> <!-- Estilo CSS -->
+    <title>GLISEBO - Página Inicial</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Livros à Venda e Troca</h1>
-        <nav>
+        <div class="logo">GLISEBO</div>
+        <nav class="categorias">
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#livros">Livros à Venda</a></li>
-                <li><a href="#">Livros para Trocar</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#">Favoritos</a></li>
+                <li><a href="#">Troca</a></li>
+                <li><a href="#">Usados a Venda</a></li>
+                <li><a href="cadastrar_usuario.html">Login/Cadastro</a></li>
+                <li><a href="#">Suporte</a></li>
+                <li><a class="carrinho">Carrinho</a></li>
             </ul>
         </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+            <button>Pesquisar</button>
+        </div>
     </header>
+    
 
-
-    <section id="destaques">
-        <h2>Destaques</h2>
-        <!-- Aqui você pode colocar os livros em destaque -->
+    <section class="livros-disponiveis">
+        <h2>Livros Usados Disponíveis</h2>
+        <div class="livros-carousel">
+            <div class="livro">
+                <img src="caminho/para/imagem.jpg" alt="Capa do Livro">
+                <h3>Título do Livro</h3>
+                <p>Autor: Nome do Autor</p>
+                <p>Preço: R$XX,XX</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            
+            <div class="livro">
+                <!-- Conteúdo do segundo livro -->
+            </div>
+            <div class="livro">
+                <!-- Conteúdo do terceiro livro -->
+            </div>
+            <!-- Adicione mais divs .livro conforme necessário -->
+        </div>
     </section>
-
-    <section id="livros-venda">
-        <h2>Livros à Venda</h2>
-        <!-- Aqui você pode listar os livros disponíveis para venda -->
+    
+    <section class="autores-principais">
+        <h2>Principais Autores</h2>
+        <div class="autores-carousel">
+            <div class="autor">
+                <img src="caminho/para/imagem-autor.jpg" alt="Foto do Autor">
+                <h3>Nome do Autor</h3>
+                <p>Número de Livros: XX</p>
+                <button>Ver Livros</button>
+            </div>
+            
+            <div class="autor">
+                <!-- Conteúdo do segundo autor -->
+            </div>
+            <div class="autor">
+                <!-- Conteúdo do terceiro autor -->
+            </div>
+            <!-- Adicione mais divs .autor conforme necessário -->
+        </div>
     </section>
-
-    <section id="livros-troca">
-        <h2>Livros para Troca</h2>
-        <!-- Aqui você pode listar os livros disponíveis para troca -->
+    
+    <section class="livros-favoritados">
+        <h2>Livros Mais Favoritados</h2>
+        <div class="favoritos-carousel">
+            <div class="favorito">
+                <img src="caminho/para/imagem-livro-favorito.jpg" alt="Capa do Livro Favorito">
+                <h3>Título do Livro Favorito</h3>
+                <p>Autor: Nome do Autor</p>
+                <p>Preço: R$XX,XX</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            
+            <div class="favorito">
+                <!-- Conteúdo do segundo livro favoritado -->
+            </div>
+            <div class="favorito">
+                <!-- Conteúdo do terceiro livro favoritado -->
+            </div>
+            <!-- Adicione mais divs .favorito conforme necessário -->
+        </div>
     </section>
-
-    <footer>
-        <p>&copy; 2024 Livros à Venda e Troca. Todos os direitos reservados.</p>
-    </footer>
+    
 </body>
 </html>
