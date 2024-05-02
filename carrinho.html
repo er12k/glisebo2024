@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estante Virtual - Livros Usados</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #fddde6; /* Rosa pastel */
+            color: #db05a9; /* Rosa escuro */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #cep-input {
+            display: none;
+            padding: 8px;
+            font-size: 16px;
+        }
+        .search:hover #cep-input {
+            display: inline-block;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-right: 20px;
+            background-color: #ffc0cb; /* Rosa pastel */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block; /* Adicionado */
+        }
+        .nav-item {
+            font-size: 16px;
+            margin-right: 20px;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+        }
+        .nav-item:hover {
+            text-decoration: underline;
+        }
+        .cart {
+            margin-top: 20px;
+        }
+        .empty-cart {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .recommendations {
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .book-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .book {
+            width: calc(25% - 20px);
+            margin: 10px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        /* Cores Personalizadas */
+        .nav-item-categorias {
+            color: #ee0653; /* Rosa vibrante */
+        }
+        .nav-item-mais-vendidos {
+            color: #ee0653; /* Laranja */
+        }
+        .nav-item-principais-autores {
+            color: #ee0653; /* Azul aço */
+        }
+        .nav-item-dicas-livros {
+            color: #ee0653; /* Índigo */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Estante Virtual - Livros Usados</h1>
+
+    <div class="search">
+        <input type="text" id="cep-input" placeholder="Digite seu CEP">
+        <button>Ver Ofertas na sua região</button>
+    </div>
+
+    <div class="nav">
+        <span class="nav-item nav-item-categorias">Categorias</span>
+        <span class="nav-item nav-item-mais-vendidos">Livros Mais Vendidos</span>
+        <span class="nav-item nav-item-principais-autores">Principais Autores</span>
+        <span class="nav-item nav-item-dicas-livros">Dicas de Livros</span>
+    </div>
+
+    <div class="cart">
+        <h2>Carrinho de Compras</h2>
+        <p class="empty-cart">Carrinho Vazio</p>
+    </div>
+
+    <div class="recommendations">
+        <p>Veja recomendações para você</p>
+        <div class="book-list">
+            <!-- Livros do site a venda -->
+            <div class="book">
+                <h3>Livro 1</h3>
+                <p>Autor 1</p>
+                <p>Preço: R$ 20,00</p>
+            </div>
+            <div class="book">
+                <h3>Livro 2</h3>
+                <p>Autor 2</p>
+                <p>Preço: R$ 15,00</p>
+            </div>
+            <div class="book">
+                <h3>Livro 3</h3>
+                <p>Autor 3</p>
+                <p>Preço: R$ 18,00</p>
+            </div>
+            <div class="book">
+                <h3>Livro 4</h3>
+                <p>Autor 4</p>
+                <p>Preço: R$ 25,00</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
