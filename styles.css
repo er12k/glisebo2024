@@ -1,6 +1,17 @@
 /* index.html*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F6D9E2; /* Cor de fundo para toda a tela inicial */
+    color: #333; /* Cor do texto */
+    margin: 0;
+    padding: 0;
+}
+
+/* Restante do seu CSS aqui */
+
 header {
-    background-color: #ecd4e7;
+    background-color: #faf3f8;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -78,5 +89,126 @@ nav.categorias ul li a {
     overflow-x: auto; /* Permite rolar horizontalmente se houver muitas telas */
 }
 
+.img_livro{
+    width: 200px;
+}
+.img_autor{
+    margin-right: 10px;
+    width: 200px;
+}
+.img_favorito{
+    width: 200px;
+}
+
 /* Estilize as telas conforme necessário */
 
+/* Reset CSS básico para limpar as margens e preenchimentos padrão */
+body, h1, h2, h3, p, ul, li, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #F6D9E2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+nav.categorias ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav.categorias ul li {
+    margin-right: 20px;
+}
+
+nav.categorias ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilos para o conteúdo */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.favoritos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.favorito {
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.favorito img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.favorito h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.favorito p {
+    margin-bottom: 5px;
+}
+
+.favorito button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #F6D9E2;
+    padding: 20px;
+    text-align: center;
+}
