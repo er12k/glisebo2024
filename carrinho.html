@@ -1,136 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estante Virtual - Livros Usados</title>
-    <style>
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            background-color: #fddde6; /* Rosa pastel */
-            color: #db05a9; /* Rosa escuro */
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .nav {
-            margin-bottom: 20px;
-            text-align: center; /* Centraliza a navegação */
-        }
-
-        .nav-item {
-            font-size: 16px;
-            margin-right: 20px;
-            cursor: pointer;
-            display: inline-block;
-        }
-
-        .nav-item:hover {
-            text-decoration: underline;
-        }
-
-        .cart {
-            margin-top: 20px;
-            text-align: center; /* Centraliza Carrinho de Compras e Carrinho Vazio */
-        }
-
-        .empty-cart {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .recommendations {
-            margin-top: 30px;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center; /* Centraliza Veja Recomendações para Você */
-        }
-
-        .book-list {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 10px;
-        }
-
-        .book {
-            width: calc(25% - 20px);
-            margin: 10px;
-            padding: 10px;
-            background-color: #fff;
-            border-radius: 5px;
-        }
-
-        /* Estilo para a frase clicável */
-        .ver-ofertas {
-            color: #db05a9; /* Mesma cor do texto geral */
-            text-decoration: none;
-            cursor: pointer;
-            display: block;
-            margin-top: 10px;
-            text-align: center;
-        }
-
-        .ver-ofertas:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Carrinho - GLISEBO</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-    <div class="container">
-        <h1>GLISEBO</h1>
-
-        <div class="nav">
-            <span class="nav-item">Categorias</span>
-            <span class="nav-item">Livros mais vendidos</span>
-            <span class="nav-item">Principais autores</span>
-            <span class="nav-item">Dicas de livros</span>
+    <header>
+        <div class="logo">GLISEBO</div>
+        <nav class="categorias">
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="favoritos.html">Meus Favoritos</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="suporte.html">Suporte</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+            <button>Pesquisar</button>
         </div>
+    </header>
 
-        <div class="cart">
-            <h2>Carrinho de Compras</h2>
-            <p class="empty-cart">Carrinho Vazio</p>
-            <!-- Frase clicável em vez do botão -->
-            <a href="#" class="ver-ofertas">Ver ofertas na sua região</a>
-        </div>
+    <h1>Seu Carrinho</h1>
 
-        <div class="recommendations">
-            <p>Veja recomendações para você</p>
-            <div class="book-list">
-                <!-- Livros do site à venda -->
-                <div class="book">
-                    <h3>Livro 1</h3>
-                    <p>Autor 1</p>
-                    <p>Preço: R$ 20,00</p>
-                </div>
-                <div class="book">
-                    <h3>Livro 2</h3>
-                    <p>Autor 2</p>
-                    <p>Preço: R$ 15,00</p>
-                </div>
-                <div class="book">
-                    <h3>Livro 3</h3>
-                    <p>Autor 3</p>
-                    <p>Preço: R$ 18,00</p>
-                </div>
-                <div class="book">
-                    <h3>Livro 4</h3>
-                    <p>Autor 4</p>
-                    <p>Preço: R$ 25,00</p>
-                </div>
+    <section class="itens-carrinho">
+        <div class="item">
+            <img src="caminho/para/imagem-livro.jpg" alt="Capa do Livro">
+            <div class="detalhes">
+                <h2>Título do Livro</h2>
+                <p>Autor: Nome do Autor</p>
+                <p>Preço: R$XX,XX</p>
+                <p>Quantidade: 1</p>
+                <button>Remover</button>
             </div>
         </div>
-    </div>
+        <!-- Repita este bloco .item para cada item no carrinho -->
+    </section>
 
+    <footer>
+        <!-- Rodapé -->
+    </footer>
 </body>
-
 </html>
