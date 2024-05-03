@@ -1,144 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLISEBO - Página Inicial</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Estilos CSS */
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            background-color: #fddde6; /* Rosa pastel */
-            color: #f406bc; /* Rosa escuro */
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center; /* Centraliza os elementos dentro do container */
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #db05a9;
-            color: white;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .categorias ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
-
-        .categorias ul li {
-            display: inline-block;
-        }
-
-        .categorias ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .search-bar {
-            display: flex;
-            align-items: center;
-        }
-
-        .search-bar input {
-            padding: 5px;
-            border: none;
-            border-radius: 5px;
-            margin-right: 5px;
-        }
-
-        .search-bar button {
-            background-color: white;
-            color: #db05a9;
-            border: none;
-            border-radius: 5px;
-            padding: 5px;
-        }
-
-        .livros-disponiveis, .autores-principais, .livros-favoritados {
-            padding: 20px;
-        }
-
-        .livro, .autor, .favorito {
-            border: 1px solid #db05a9;
-            border-radius: 5px;
-            padding: 10px;
-            margin-right: 10px;
-            text-align: center;
-            background-color: #ffffff;
-        }
-
-        img {
-            max-width: 100px;
-            height: auto;
-        }
-
-        .add-to-cart {
-            background-color: #ff69b4; /* Cor do botão */
-            color: #fff;
-            padding: 8px 16px;
-            margin-top: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            display: block;
-            text-decoration: none;
-        }
-
-        .add-to-cart:hover {
-            background-color: #e3459a; /* Cor do botão ao passar o mouse */
-        }
-
-        .cart {
-            margin-top: 20px;
-        }
-
-        .empty-cart {
-            font-size: 24px;
-            font-weight: bold;
-            color: red;
-        }
-
-        .recommendations {
-            margin-top: 30px;
-            font-size: 18px;
-            font-weight: bold;
-            color: green;
-        }
-
-    </style>
 </head>
-
 <body>
 
     <header>
         <div class="logo">GLISEBO</div>
         <nav class="categorias">
             <ul>
-                <li><a href="#">Favoritos</a></li>
-                <li><a href="#">Troca</a></li>
-                <li><a href="#">Usados</a></li>
-                <li><a href="#">Login/Cadastro</a></li>
-                <li><a href="#">Suporte</a></li>
-                <li><a href="#">Carrinho</a></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
+                <li><a href="troca.html">Troca</a></li>
+                <li><a href="comprar_livros_usados.html">Usados</a></li>
+                <li><a href="realizar_login.html">Login</a></li>
+                <li><a href="cadastrar_usuario.html">Cadastro</a></li>
+                <li><a href="receber_suporte.html">Suporte</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
             </ul>
         </nav>
         <div class="search-bar">
@@ -184,23 +65,23 @@
                     <img class="img_autor" src="img/autor1.jpg" alt="Foto do Autor">
                     <h3>Colleen Hoover</h3>
                     <p>Número de Livros: 10</p>
-                    <button>Ver Livros</button>
+                    <button class="add-to-cart">Ver Livros</button>                
                 </div>
                 
                 <div class="autor">
                     <img class="img_autor" src="img/autor2.jpg" alt="Foto do Autor">
                     <h3>Virginia Woolf</h3>
                     <p>Número de Livros: 10</p>
-                    <button>Ver Livros</button>
+                    <button class="add-to-cart">Ver Livros</button>               
                 </div>
-                
+
                 <div class="autor">
                     <img class="img_autor" src="img/autor3.webp" alt="Foto do Autor">
                     <h3>Clarice Lispector</h3>
                     <p>Número de Livros: 10</p>
-                    <button>Ver Livros</button>
+                    <button class="add-to-cart">Ver Livros</button>                
                 </div>
-                <!-- Adicione mais divs .autor conforme necessário -->
+            
             </div>
         </section>
 
@@ -232,39 +113,5 @@
                 </div>
             </div>
         </section>
-
-        <!-- Seção do Carrinho -->
-        <div id="carrinho" class="cart">
-            <h2>Carrinho de Compras</h2>
-            <p id="carrinho-vazio">Carrinho Vazio</p>
-            <ul id="lista-carrinho"></ul>
-        </div>
-    </div>
-
-    <script>
-        // JavaScript para adicionar livros ao carrinho
-        const carrinhoVazio = document.getElementById('carrinho-vazio');
-        const listaCarrinho = document.getElementById('lista-carrinho');
-        const botoesAdicionar = document.querySelectorAll('.add-to-cart');
-
-        botoesAdicionar.forEach(botao => {
-            botao.addEventListener('click', function () {
-                const livro = botao.parentElement;
-                const nomeLivro = livro.querySelector('h3').textContent;
-                const autor = livro.querySelector('p').textContent;
-                const preco = livro.querySelector('p:nth-of-type(2)').textContent;
-
-                // Remover a mensagem "Carrinho Vazio"
-                carrinhoVazio.style.display = 'none';
-
-                // Adicionar o livro ao carrinho
-                const itemCarrinho = document.createElement('li');
-                itemCarrinho.textContent = `${nomeLivro} - ${autor} (${preco})`;
-                listaCarrinho.appendChild(itemCarrinho);
-            });
-        });
-    </script>
-
 </body>
-
 </html>
