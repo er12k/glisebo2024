@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum de Reclamações - GLISEBO</title>
+    <!-- CSS Embutido -->
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            color: #0d0808; /* Cor do texto em tom cinza-escuro */
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #e91e63; /* Cor de fundo rosa */
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 1.5rem; /* Tamanho da fonte do cabeçalho */
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white; /* Cor de fundo branca para contraste */
+            border-radius: 12px; /* Cantos arredondados */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Formulário de reclamações */
+        .complaint-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Campos do formulário */
+        .complaint-form input,
+        .complaint-form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 100%; /* Ocupa toda a largura */
+        }
+
+        /* Botão de enviar */
+        .submit-button {
+            padding: 10px;
+            background-color: #e91e63; /* Cor de fundo rosa */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: fit-content;
+            margin: 0 auto; /* Centraliza o botão */
+        }
+
+        .submit-button:hover {
+            background-color: #d81b60; /* Cor mais escura de rosa ao passar o mouse */
+        }
+
+        /* Seção de reclamações */
+        .complaints-section {
+            margin-top: 30px;
+        }
+
+        /* Reclamação individual */
+        .complaint {
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+            border-radius: 8px; /* Cantos arredondados */
+            background-color: #f9f9f9; /* Fundo claro */
+        }
+
+        /* Estilização do nome da pessoa e do texto da reclamação */
+        .complaint h3 {
+            margin: 0;
+            font-size: 1.1rem; /* Tamanho da fonte do nome */
+        }
+
+        .complaint p {
+            margin-top: 5px;
+            font-size: 0.9rem; /* Tamanho da fonte da reclamação */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>GLISEBO - Fórum</h2>
+    </header>
+
+    <div class="container">
+        <form class="complaint-form">
+            <h2>Postar uma reclamação</h2>
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="complaint">Reclamação:</label>
+                <textarea id="complaint" name="complaint" placeholder="Digite sua reclamação" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Enviar</button>
+        </form>
+
+        <!-- Seção de reclamações -->
+        <div class="complaints-section">
+            <h2>Reclamações Postadas</h2>
+            <!-- Exemplo de reclamação individual -->
+            <div class="complaint">
+                <h3>Maria Silva</h3>
+                <p>Não gostei da qualidade dos livros recebidos. Estavam em pior estado do que anunciado.</p>
+            </div>
+            <div class="complaint">
+                <h3>João Santos</h3>
+                <p>O tempo de entrega foi muito longo. Preciso dos livros com mais urgência.</p>
+            </div>
+            <!-- Adicione mais reclamações aqui -->
+        </div>
+    </div>
+</body>
+
+</html>
