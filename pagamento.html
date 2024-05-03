@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - GLISEBO</title>
+    <!-- CSS Embutido -->
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fddde6; /* Fundo em tons de rosa suave */
+            color: #d359ae; /* Cor do texto em tom cinza-escuro */
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem; /* Tamanho da fonte do cabeçalho */
+            margin-bottom: 20px; /* Espaçamento inferior */
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Lista de livros no carrinho */
+        .cart-list {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Livro individual no carrinho */
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        /* Imagem do livro */
+        .cart-item img {
+            width: 60px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        /* Detalhes do livro */
+        .cart-details {
+            flex: 1;
+        }
+
+        .cart-details h3 {
+            margin: 0;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .cart-details p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Opções de pagamento */
+        .payment-options {
+            margin-bottom: 20px;
+        }
+
+        .payment-options h2 {
+            margin-bottom: 10px;
+        }
+
+        .payment-method {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .payment-method input {
+            margin-right: 10px;
+        }
+
+        /* Botão de compra */
+        .buy-button {
+            padding: 12px;
+            background-color: #e91e63; /* Cor rosa suave */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+            display: block;
+            width: 100%; /* Ocupa toda a largura */
+            text-decoration: none; /* Remover sublinhado de links */
+        }
+
+        .buy-button:hover {
+            background-color: #d81b60; /* Cor mais escura de rosa */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>GLISEBO - Carrinho de Compras</h1>
+    </header>
+
+    <div class="container">
+        <!-- Lista de livros no carrinho -->
+        <div class="cart-list">
+            <!-- Livro individual -->
+            <div class="cart-item">
+                <img src="caminho/para/capa-livro.jpg" alt="Capa do Livro">
+                <div class="cart-details">
+                    <h3>Título do Livro</h3>
+                    <p>Preço: R$ XX,XX</p>
+                </div>
+                <!-- Adicionar mais informações ou opções para remover livros do carrinho -->
+            </div>
+            <!-- Adicione mais livros ao carrinho aqui -->
+        </div>
+
+        <!-- Opções de pagamento -->
+        <div class="payment-options">
+            <h2>Opções de Pagamento</h2>
+            <div class="payment-method">
+                <input type="radio" id="cartao-credito" name="pagamento" value="cartao-credito" checked>
+                <label for="cartao-credito">Cartão de Crédito</label>
+            </div>
+            <div class="payment-method">
+                <input type="radio" id="boleto" name="pagamento" value="boleto">
+                <label for="boleto">Boleto Bancário</label>
+            </div>
+            <div class="payment-method">
+                <input type="radio" id="pix" name="pagamento" value="pix">
+                <label for="pix">Pix</label>
+            </div>
+        </div>
+
+        <!-- Botão de comprar -->
+        <a href="carrinho.html" class="buy-button">Comprar</a>
+    </div>
+</body>
+
+</html>

@@ -1,46 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho - GLISEBO</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Finalizar Compra - GLISEBO</title>
+    <!-- CSS Embutido -->
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f0f4; /* Fundo em tons de rosa suave */
+            color: #d359ae; /* Cor do texto em tom cinza-escuro */
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem; /* Tamanho da fonte do cabeçalho */
+            margin-bottom: 20px; /* Espaçamento inferior */
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Formulário de finalização de compra */
+        .checkout-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Campos do formulário */
+        .checkout-form input,
+        .checkout-form select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Botão para finalizar a compra */
+        .finalize-button {
+            padding: 12px;
+            background-color: #e91e63; /* Cor rosa suave */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+            width: fit-content;
+            margin-top: 20px;
+        }
+
+        .finalize-button:hover {
+            background-color: #d81b60; /* Cor mais escura de rosa */
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <div class="logo">GLISEBO</div>
-        <nav class="categorias">
-            <ul>
-                <li><a href="index.html">Página Inicial</a></li>
-                <li><a href="favoritos.html">Meus Favoritos</a></li>
-                <li><a href="carrinho.html">Carrinho</a></li>
-                <li><a href="suporte.html">Suporte</a></li>
-            </ul>
-        </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Pesquisar...">
-            <button>Pesquisar</button>
-        </div>
+        <h1>Finalizar Compra - GLISEBO</h1>
     </header>
 
-    <h1>Seu Carrinho</h1>
+    <div class="container">
+        <!-- Formulário de finalização de compra -->
+        <form class="checkout-form">
+            <h2>Informações de Pagamento</h2>
+            <!-- Campos para dados de pagamento -->
+            <input type="text" name="nome" placeholder="Nome Completo" required>
+            <input type="text" name="numero_cartao" placeholder="Número do Cartão" required>
+            <input type="text" name="validade_cartao" placeholder="Validade (MM/AA)" required>
+            <input type="text" name="cvv" placeholder="CVV" required>
 
-    <section class="itens-carrinho">
-        <div class="item">
-            <img src="caminho/para/imagem-livro.jpg" alt="Capa do Livro">
-            <div class="detalhes">
-                <h2>Título do Livro</h2>
-                <p>Autor: Nome do Autor</p>
-                <p>Preço: R$XX,XX</p>
-                <p>Quantidade: 1</p>
-                <button>Remover</button>
-            </div>
-        </div>
-        <!-- Repita este bloco .item para cada item no carrinho -->
-    </section>
+            <h2>Informações de Entrega</h2>
+            <!-- Campos para dados de entrega -->
+            <input type="text" name="endereco" placeholder="Endereço Completo" required>
+            <input type="text" name="cidade" placeholder="Cidade" required>
+            <input type="text" name="estado" placeholder="Estado" required>
+            <input type="text" name="cep" placeholder="CEP" required>
 
-    <footer>
-        <!-- Rodapé -->
-    </footer>
+            <!-- Botão para finalizar a compra -->
+            <button type="submit" class="finalize-button">Finalizar Compra</button>
+        </form>
+    </div>
 </body>
+
 </html>

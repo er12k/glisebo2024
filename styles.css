@@ -306,3 +306,89 @@ footer {
     padding: 20px;
     text-align: center;
 }
+
+section{
+    display: flex;
+    max-width: 2000 px;
+    justify-content: space-around;
+    padding: 5 10%;
+    flex-wrap: wrap;
+    margin: 90px auto;
+}
+
+.descricao-pagamento{
+    width: 40%;
+}
+
+.descricao-pagamento h3{
+    color:rgb(140, 140, 140);
+}
+
+.descricao-pagamento h2{
+    color: black;
+    font-size: 50px;
+}
+
+.form-main{
+    -webkit-box-shadow: -8px 5px 15px 5px #C7C7C7;
+    box-shadow:-8px 5px 15px 5px #C7C7C7;
+    padding: 30px 30px 80px 30px;
+    width:50%;
+}
+.form-main form{
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-100{width: 100%;margin-bottom: 10px;}
+.form-50{width:100%;display: flex;margin-bottom: 10px;}
+
+
+.form-main label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: rgb(140, 140, 140);
+}
+
+.form-main input[type="text"],
+input[type="email"],
+input[type="password"],
+select{
+    padding-left: 10px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+}
+
+.form-main input[type=submit]{
+    width:100% ;
+    height: 40px;
+    border: 0;
+    cursor: pointer;
+    background-color: #d3209d;
+    color:white;
+}
+
+.form-main input[type="submit"]:hover {
+    background-color: #d359ae; /* Cor de botão rosa pastel mais escura ao passar o mouse */
+}
+
+@media screen and (max-width: 768px) {
+    .descricao-pagamento,
+    .form-pagamento{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+.centered-content {
+    width: 100%;
+    margin-bottom: 40px
+}
+
+p {
+    font-size: 12px;
+    color: #8B0000; 
+    margin-top: 5px;
+}
+
