@@ -1,19 +1,77 @@
 /* index.html*/
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #F6D9E2; /* Cor de fundo para toda a tela inicial */
-    color: #333; /* Cor do texto */
+ /* Estilos CSS */
+ body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fddde6; /* Rosa pastel */
+    color: #db05a9; /* Rosa escuro */
     margin: 0;
     padding: 0;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Centraliza os elementos dentro do container */
+}
+
 header {
-    background-color: #faf3f8;
-    padding: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
+    background-color: #db05a9;
+    color: white;
+}
+
+.livros-disponiveis, .autores-principais, .livros-favoritados {
+    padding: 20px;
+}
+
+.livro, .autor, .favorito {
+    border: 1px solid #db05a9;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+img {
+    max-width: 100px;
+    height: auto;
+}
+
+.add-to-cart {
+    background-color: #ff69b4; /* Cor do botão */
+    color: #fff;
+    padding: 10px 16px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+}
+
+.add-to-cart:hover {
+    background-color: #ff1493; /* Cor do botão ao passar o mouse */
+}
+
+.cart {
+    margin-top: 20px;
+}
+
+.empty-cart {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+}
+
+.recommendations {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: green;
 }
 
 .logo {
@@ -78,7 +136,7 @@ nav.categorias ul li a {
     margin-top: 40px; 
 }
 .livros-favoritados{
-    margin-top: 40px;
+    margin-top: 30px;
 }
 .livro, .autor, .favorito {
     background-color: #fff;
@@ -86,12 +144,12 @@ nav.categorias ul li a {
     border-radius: 5px;
     padding: 20px;
     margin-right: 10px; /* Espaçamento entre as telas */
-    width: 200px; /* Largura das telas, ajuste conforme necessário */
+    width: 150px; /* Largura das telas, ajuste conforme necessário */
 }
 
 .livros-carousel, .autores-carousel, .favoritos-carousel {
     display: flex;
-    overflow-x: auto; 
+    overflow-x:auto; 
 }
 
 .img_livro{
@@ -198,6 +256,45 @@ h1 {
 .livro-usado button {
     padding: 8px 15px;
     background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.itens-carrinho {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.item .detalhes h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.item .detalhes p {
+    margin-bottom: 5px;
+}
+
+.item button {
+    padding: 8px 15px;
+    background-color: #FF5733;
     color: white;
     border: none;
     border-radius: 4px;
