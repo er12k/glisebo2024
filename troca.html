@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLISEBO - Solicitação de Troca</title>
+    <style>
+        /* Estilos CSS para o site */
+        body {
+            font-family: 'Sources Sans Pro', sans-serif;
+            background-color: #fddde6; /* Cor de fundo em rosa pastel */
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 35px;
+            color: #db05a9; /* Cor de texto em tom de rosa */
+        }
+
+        form {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fffcfc; /* Fundo do formulário em rosa claro */
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(128, 61, 61, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #e3d9d9;
+            border-radius: 4px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            background-color: #f806cc; /* Cor de botão rosa claro */
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #080505;
+        }
+
+        .info-section {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ef92d2; /* Fundo da seção de informações em rosa claro */
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-section h2 {
+            margin-top: 0;
+        }
+
+        .info-section p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>GLISEBO - Troca</h1>
+
+    <!-- Formulário de Solicitação de Troca -->
+    <form action="/troca" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+     <label for="numeroPedido">Número do pedido:</label>
+        <input type="text" id="numeroPedido" name="numeroPedido" required>
+
+        <label for="motivoTroca">Motivo da troca:</label>
+        <textarea id="motivoTroca" name="motivoTroca" required></textarea>
+
+        <button type="submit">Enviar Solicitação de Troca</button>
+    </form>
+
+    <!-- Seção com Políticas de Troca -->
+    <div class="info-section">
+        <h2>Política de troca</h2>
+        <p>Os pedidos de troca devem ser feitos dentro de 30 dias após o recebimento do livro.</p>
+        <p>O livro a ser trocado deve estar em boas condições para ser elegível para troca.</p>
+        <p>O cliente é responsável pelos custos de envio do livro de volta ao GLISEBO.</p>
+    </div>
+
+    <!-- Seção com Informações de Contato -->
+    <div class="info-section">
+        <h2>Informações de contato</h2>
+        <p>E-mail: suporte@glisebo.com</p>
+        <p>Telefone: +55 (63) 3361-1095</p>
+    </div>
+
+    <!-- Seção com Instruções de Devolução -->
+    <div class="info-section">
+        <h2>Instruções de devolução</h2>
+        <p>Para devolver o livro, embale-o cuidadosamente e envie para o endereço fornecido na confirmação do pedido.</p>
+        <p>Certifique-se de incluir o número do pedido e informações de contato no pacote.</p>
+    </div>
+
+    <!-- Seção de Rastreamento de Troca -->
+    <div class="info-section">
+        <h2>Rastreamento</h2>
+        <p>Para rastrear o status da sua solicitação de troca, insira seu número de pedido:</p>
+        <form action="/rastreio-troca" method="GET">
+            <input type="text" id="numeroPedidoRastreio" name="numeroPedidoRastreio" placeholder="Número do Pedido" required>
+            <button type="submit">Rastrear Troca</button>
+        </form>
+        <!-- Aqui você pode adicionar a lógica de servidor para processar a solicitação de rastreamento -->
+    </div>
+</body>
