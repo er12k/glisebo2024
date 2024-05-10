@@ -1,18 +1,9 @@
-/* index.html*/
- /* Estilos CSS */
- body {
-    font-family: 'Times New Roman', Times, serif;
+body {
+    font-family: 'Source Sans Pro', sans-serif;
     background-color: #fddde6; /* Rosa pastel */
     color: #db05a9; /* Rosa escuro */
     margin: 0;
     padding: 0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center; /* Centraliza os elementos dentro do container */
 }
 
 header {
@@ -25,20 +16,20 @@ header {
 }
 
 .livros-disponiveis, .autores-principais, .livros-favoritados {
-    padding: 20px;
+    padding: 60px;
 }
 
 .livro, .autor, .favorito {
     border: 1px solid #db05a9;
     border-radius: 5px;
-    padding: 10px;
-    margin-right: 10px;
+    padding: 20px;
+    margin-right: 20px;
     text-align: center;
     background-color: #ffffff;
 }
 
 img {
-    max-width: 100px;
+    max-width: 150px;
     height: auto;
 }
 
@@ -46,16 +37,18 @@ img {
     background-color: #ff69b4; /* Cor do botão */
     color: #fff;
     padding: 10px 16px;
-    margin-top: 10px;
     border-radius: 6px;
     cursor: pointer;
     display: block;
     text-decoration: none;
+    margin: 10px auto 20px; /* Alinhar e centralizar o botão na vertical */
 }
 
 .add-to-cart:hover {
     background-color: #ff1493; /* Cor do botão ao passar o mouse */
 }
+
+
 
 .cart {
     margin-top: 20px;
@@ -77,8 +70,8 @@ img {
 .logo {
     font-size: 30px;
     font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    color: #f52cb9;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fdfdfd;
     margin-right: 20px; /* Adicionando margem à direita */
 }
 
@@ -105,7 +98,7 @@ nav.categorias ul li {
 }
 
 nav.categorias ul li a {
-    color: #333;
+    color: hsl(0, 0%, 98%);
     text-decoration: none;
 }
 
@@ -130,21 +123,21 @@ nav.categorias ul li a {
 }
 
 .livros-disponiveis {
-    margin-bottom: 40px; 
+    margin-bottom: 60px; 
 }
 .autores-principais {
-    margin-top: 40px; 
+    margin-top: 60px; 
 }
 .livros-favoritados{
-    margin-top: 30px;
+    margin-top: 60px;
 }
 .livro, .autor, .favorito {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
-    margin-right: 10px; /* Espaçamento entre as telas */
-    width: 150px; /* Largura das telas, ajuste conforme necessário */
+    margin-right: 10px;
+    width: 200px;
 }
 
 .livros-carousel, .autores-carousel, .favoritos-carousel {
@@ -156,7 +149,6 @@ nav.categorias ul li a {
     width: 200px;
 }
 .img_autor{
-    margin-right: 10px;
     width: 200px;
 }
 .img_favorito{
@@ -165,48 +157,7 @@ nav.categorias ul li a {
 
 h1 {
     text-align: center;
-    margin: 20px 0;
-}
-
-.favoritos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 20px;
-}
-
-.favorito {
-    width: 250px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.favorito img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-.favorito h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.favorito p {
-    margin-bottom: 5px;
-}
-
-.favorito button {
-    padding: 8px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    margin: 30px 0;
 }
 
 footer {
@@ -245,8 +196,8 @@ h1 {
 }
 
 .livro-usado .detalhes h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 .livro-usado .detalhes p {
@@ -306,89 +257,3 @@ footer {
     padding: 20px;
     text-align: center;
 }
-
-section{
-    display: flex;
-    max-width: 2000 px;
-    justify-content: space-around;
-    padding: 5 10%;
-    flex-wrap: wrap;
-    margin: 90px auto;
-}
-
-.descricao-pagamento{
-    width: 40%;
-}
-
-.descricao-pagamento h3{
-    color:rgb(140, 140, 140);
-}
-
-.descricao-pagamento h2{
-    color: black;
-    font-size: 50px;
-}
-
-.form-main{
-    -webkit-box-shadow: -8px 5px 15px 5px #C7C7C7;
-    box-shadow:-8px 5px 15px 5px #C7C7C7;
-    padding: 30px 30px 80px 30px;
-    width:50%;
-}
-.form-main form{
-    display: flex;
-    flex-wrap: wrap;
-}
-.form-100{width: 100%;margin-bottom: 10px;}
-.form-50{width:100%;display: flex;margin-bottom: 10px;}
-
-
-.form-main label{
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: rgb(140, 140, 140);
-}
-
-.form-main input[type="text"],
-input[type="email"],
-input[type="password"],
-select{
-    padding-left: 10px;
-    width: 100%;
-    height: 40px;
-    border: 1px solid #ccc;
-}
-
-.form-main input[type=submit]{
-    width:100% ;
-    height: 40px;
-    border: 0;
-    cursor: pointer;
-    background-color: #d3209d;
-    color:white;
-}
-
-.form-main input[type="submit"]:hover {
-    background-color: #d359ae; /* Cor de botão rosa pastel mais escura ao passar o mouse */
-}
-
-@media screen and (max-width: 768px) {
-    .descricao-pagamento,
-    .form-pagamento{
-        width: 100%;
-        margin-bottom: 40px;
-    }
-}
-
-.centered-content {
-    width: 100%;
-    margin-bottom: 40px
-}
-
-p {
-    font-size: 12px;
-    color: #8B0000; 
-    margin-top: 5px;
-}
-
