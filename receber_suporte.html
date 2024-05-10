@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte - GLISEBO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">GLISEBO</div>
+        <nav class="categorias">
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="favoritos.html">Meus Favoritos</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="suporte.html">Suporte</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar...">
+            <button>Pesquisar</button>
+        </div>
+    </header>
+
+    <h1>Suporte</h1>
+
+    <section class="formulario-suporte">
+        <h2>Envie sua Dúvida ou Problema</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="categoria">Categoria do Problema:</label>
+            <select id="categoria" name="categoria">
+                <option value="Login">Login</option>
+                <option value="Cadastro">Cadastro</option>
+                <option value="Compra">Compra</option>
+                <option value="Navegação">Navegação</option>
+                <option value="Outro">Outro</option>
+            </select>
+
+            <label for="descricao">Descrição do Problema:</label>
+            <textarea id="descricao" name="descricao" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section class="contato-admin">
+        <h2>Contato Administrador</h2>
+        <p>Para problemas urgentes ou que necessitem de atendimento personalizado, entre em contato diretamente com nosso administrador:</p>
+        <p>E-mail: admin@glisebo.com</p>
+    </section>
+
+    <footer>
+        <!-- Rodapé -->
+    </footer>
+</body>
+</html>

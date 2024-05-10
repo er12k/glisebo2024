@@ -10,7 +10,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px 30px;
     background-color: #db05a9;
     color: white;
 }
@@ -158,18 +158,13 @@ nav.categorias ul li a {
 h1 {
     text-align: center;
     margin: 30px 0;
+    font-size: 35px;
 }
 
 footer {
     background-color: #F6D9E2;
     padding: 20px;
     text-align: center;
-}
-
-
-h1 {
-    text-align: center;
-    margin: 20px 0;
 }
 
 .livros-usados {
@@ -256,4 +251,63 @@ footer {
     background-color: #F6D9E2;
     padding: 20px;
     text-align: center;
+}
+
+
+.formulario-suporte {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-suporte h2 {
+    margin-bottom: 20px;
+}
+
+.formulario-suporte label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.formulario-suporte input[type="text"],
+.formulario-suporte select,
+.formulario-suporte textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.formulario-suporte textarea {
+    resize: vertical;
+}
+
+.formulario-suporte button {
+    padding: 10px 16px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.formulario-suporte button:hover {
+    background-color: #ff1493;
+}
+
+.contato-admin {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contato-admin h2 {
+    margin-bottom: 20px;
 }
