@@ -19,36 +19,29 @@ header {
     padding: 60px;
 }
 
-.livro, .autor, .favorito {
-    border: 1px solid #db05a9;
-    border-radius: 5px;
-    padding: 20px;
-    margin-right: 20px;
-    text-align: center;
-    background-color: #ffffff;
+
+.img_livro, .img_favorito {
+    width: 150px;
+    height: 300px;
 }
 
-img {
-    max-width: 150px;
-    height: auto;
+.img_autor {
+    width: 200px;
+    height: 160px;
 }
 
-.add-to-cart {
-    background-color: #ff69b4; /* Cor do botão */
+.add-to-cart, .visualizar {
+    background-color: #ff69b4; 
     color: #fff;
     padding: 10px 16px;
     border-radius: 6px;
     cursor: pointer;
-    display: block;
-    text-decoration: none;
-    margin: 10px auto 20px; /* Alinhar e centralizar o botão na vertical */
+    margin: 10px auto;
 }
 
 .add-to-cart:hover {
-    background-color: #ff1493; /* Cor do botão ao passar o mouse */
+    background-color: #ff1493; 
 }
-
-
 
 .cart {
     margin-top: 20px;
@@ -130,14 +123,6 @@ nav.categorias ul li a {
 }
 .livros-favoritados{
     margin-top: 60px;
-}
-.livro, .autor, .favorito {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin-right: 10px;
-    width: 200px;
 }
 
 .livros-carousel, .autores-carousel, .favoritos-carousel {
@@ -310,4 +295,36 @@ footer {
 
 .contato-admin h2 {
     margin-bottom: 20px;
+}
+
+
+/* Estilos para o conteúdo principal */
+main {
+    padding: 20px;
+}
+
+.detalhes-livro h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.detalhes-livro p {
+    margin-bottom: 10px;
+}
+
+.detalhes-livro .add-to-cart {
+    background-color: #ff69b4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #F6D9E2;
+    padding: 20px;
+    text-align: center;
 }
