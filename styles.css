@@ -25,7 +25,7 @@ img {
     height: auto;
 }
 
-.add-to-cart {
+.add-to-cart, .visualizar1 {
     background-color: #ff69b4; /* Cor do botão */
     color: #fff;
     padding: 10px 16px;
@@ -139,6 +139,7 @@ nav.categorias ul li a {
 
 .img_livro{
     width: 200px;
+    height: 200px;
 }
 .img_autor{
     width: 200px;
@@ -302,4 +303,8 @@ footer {
 
 .contato-admin h2 {
     margin-bottom: 20px;
+}
+
+.box-inf-livro{
+    height: 200px;
 }
