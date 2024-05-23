@@ -36,8 +36,23 @@ img {
     margin: 10px auto 20px; /* Alinhar e centralizar o botão na vertical */
 }
 
-.add-to-cart:hover {
+.add-to-cart, .visualizar1:hover {
     background-color: #ff1493; /* Cor do botão ao passar o mouse */
+    color: #fff;
+}
+
+.add-to-cart, .visualizar1:visited {
+    background-color: #ff1493; /* Cor do botão ao passar o mouse */
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: #fff;
+    text-decoration: none;
 }
 
 
@@ -308,3 +323,8 @@ footer {
 .box-inf-livro{
     height: 200px;
 }
+
+.box-inf-livro-fav{
+    height: 150px;
+}
+
