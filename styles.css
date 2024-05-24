@@ -64,7 +64,7 @@ a:visited{
 .empty-cart {
     font-size: 24px;
     font-weight: bold;
-    color: red;
+    color: rgb(252, 161, 203);
 }
 
 .recommendations {
@@ -248,7 +248,7 @@ footer {
 
 .item button {
     padding: 8px 15px;
-    background-color: #FF5733;
+    background-color: #f389ca;
     color: white;
     border: none;
     border-radius: 4px;
