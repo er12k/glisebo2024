@@ -15,15 +15,12 @@ header {
     color: white;
 }
 
-.livros-disponiveis, .autores-principais, .livros-favoritados {
+.autores-principais, .livros-favoritados {
     padding: 60px;
 }
 
 
-img {
-    max-width: 150px;
-    height: auto;
-}
+
 
 .add-to-cart, .visualizar1 {
     background-color: #ff69b4; /* Cor do botão */
@@ -129,16 +126,13 @@ nav.categorias ul li a {
     cursor: pointer;
 }
 
-.livros-disponiveis {
-    margin-bottom: 60px; 
-}
 .autores-principais {
     margin-top: 60px; 
 }
 .livros-favoritados{
     margin-top: 60px;
 }
-.livro, .autor, .favorito {
+ .autor, .favorito {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -147,20 +141,9 @@ nav.categorias ul li a {
     width: 200px;
 }
 
-.livros-carousel, .autores-carousel, .favoritos-carousel {
+.autores-carousel, .favoritos-carousel {
     display: flex;
     overflow-x:auto; 
-}
-
-.img_livro{
-    width: 200px;
-    height: 200px;
-}
-.img_autor{
-    width: 200px;
-}
-.img_favorito{
-    width: 200px;
 }
 
 h1 {
@@ -191,12 +174,6 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.livro-usado img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
 
 .livro-usado .detalhes h2 {
     font-size: 20px;
@@ -230,8 +207,14 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.item img {
-    max-width: 100%;
+.img_autor {
+    max-width: 150px;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.img_favorito {
+    max-width: 150px;
     height: auto;
     border-radius: 4px;
     margin-bottom: 10px;
@@ -320,11 +303,50 @@ footer {
     margin-bottom: 20px;
 }
 
-.box-inf-livro{
-    height: 200px;
+.carousel {
+    position: relative;
+    max-width: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 1px solid #dddddd;
 }
 
-.box-inf-livro-fav{
-    height: 150px;
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-slide h2, .carousel-slide p {
+    text-align: center;
+    margin: 10px 0;
+}
